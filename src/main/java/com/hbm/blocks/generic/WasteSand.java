@@ -123,7 +123,7 @@ public class WasteSand extends BlockFalling implements IItemHazard {
 		if(this == ModBlocks.waste_sand ) {
 			
 			if(GeneralConfig.enableAutoCleanup) {
-				world.setBlockState(new BlockPos(x, y, z), Blocks.DIRT.getDefaultState());
+				world.setBlockState(new BlockPos(x, y, z), Blocks.SAND.getDefaultState());
 			}
 		}
 	}
