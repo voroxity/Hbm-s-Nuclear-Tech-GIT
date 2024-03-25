@@ -115,4 +115,16 @@ public class WasteSand extends BlockFalling implements IItemHazard {
 		}
 		return Item.getItemFromBlock(this);
 	}
+	@Override
+	public void updateTick(World world, BlockPos pos1, IBlockState state, Random rand) {
+		int x = pos1.getX();
+		int y = pos1.getY();
+		int z = pos1.getZ();
+		if(this == ModBlocks.waste_sand ) {
+			
+			if(GeneralConfig.enableAutoCleanup) {
+				world.setBlockState(new BlockPos(x, y, z), Blocks.DIRT.getDefaultState());
+			}
+		}
+	}
 }
