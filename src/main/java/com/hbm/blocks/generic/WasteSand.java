@@ -45,7 +45,7 @@ public class WasteSand extends BlockFalling implements IItemHazard {
 		this.setUnlocalizedName(s);
 		this.setRegistryName(s);
 		this.setCreativeTab(MainRegistry.controlTab);
-		this.setTickRandomly(false);
+		this.setTickRandomly(tick);
 		this.setHarvestLevel("shovel", 0);
 		this.module = new ItemHazardModule();
 		
